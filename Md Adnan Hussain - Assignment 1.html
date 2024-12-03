@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 1</title>
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAulBMVEU5Ozs6PDw6PD08PTw4Ojw4PD0wOD0wNj4eMj1HSz2JczqdgDWjhTSPdTdPSzwlMD4uPT6ZgjnjsTb/zS//zCT/ySaVejdtZjXtvTT/xiv/yCv/yCn9xDMkKz2ghS6xjDUuNUD/0TH/xyMnKjplXzb/ySz/xieAajk4OD3suS+8kTWzijR0Zz8lMkJwXDg4Pj/vtyMwM0I4Nj6piDJiVj2qgTHHmTL/ziIeMEUrOkNNSkOJcj6kgDlYSzvESsSdAAABtklEQVR4AWIAAUZGRiYUAGiBLrRdhYEogEKsriR9QCrIC3X3K///W/cM6cHZa4YheEcnCoMR+yPkOCNBIAKcQgqTUqlGQynBQo+fOs5DqZqtdqfb7fb6gwZKPYZkXA5H40hrQxlPwGhFyGCNf3GSWgRmbTSdzHxnKhzMoyRJIAg0TaLFjL4XSBZm8zxNPpUFEJovSoG2GPJ/5FLEVsYURVVZaJovV0IAm7E3q9eb7Vp7dNOSUO2sb1m191m2n5gUcS4/NFbBMeskhJXuZBicDdq6xmiSARvdJIHZU8Zh7LgfO1hqumeg6qRUaTYXzmmR1SIitNfBhdDV02xXhJwDE6C7DlY1Ul+zPjOE8+YandLEeOxF9UT6OmCozLp4hPqBjjeP1t1n+JU2qlJE3xoKWPepEL1+PNZPYxHnTi9BqHZ5QoZlNRpHvUT6oKQAHvejp1cwAsMAmSQk7T7JEHKyDYaTMjhKCV0a/TFEV71BGBLiQO373Tk9n9porZ+n66XBPsgkWMrs9fX9c//56f3OzivGYMBASiYFsrqc61xwD6OXAQ7GQKvVpQ5u8AIRQEEh84gQCtrEH94fP+w0w4hdAAAAAElFTkSuQmCC"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Vanilla CSS -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffe000;
+        box-shadow: 0 0 1rem #aaa;
+      }
+
+      #hero-image {
+        max-width: 20%;
+        transition: 0.2s linear;
+        cursor: pointer;
+        padding: 2rem;
+      }
+
+      #hero-image:hover {
+        transform: scale(1.1);
+      }
+
+      #hero-image img {
+        max-width: 100%;
+        filter: drop-shadow(0 0 0.3rem #613f007b);
+      }
+
+      #hero-name {
+        max-width: 20%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 1rem 3rem;
+        text-decoration: underline;
+      }
+
+      #main-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0rem 0rem 0rem;
+        background-image: url("https://www.altudo.co/-/media/project/altudo/altudo/hero-carousel/01-altudo-home-page-hero-banner-(1).jpg?h=1080&iar=0&w=1920&hash=BF24295A7C0B7E370CFF46514290FEC4");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+
+      #container {
+        min-width: 30rem;
+        width: 60%;
+        max-width: 40rem;
+        padding: 2rem;
+        background-color: #ffcb22;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 1rem #b07200;
+        z-index: 1;
+        margin-bottom: 4rem;
+      }
+
+      #heading {
+        width: fit-content;
+        margin-bottom: 2rem;
+      }
+
+      #heading h1 {
+        margin: 0;
+      }
+
+      #heading hr {
+        border-color: #fec202;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      .row {
+        width: 100%;
+        display: flex;
+      }
+
+      .input {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      label {
+        font-weight: 500;
+      }
+
+      input,
+      select,
+      option {
+        width: 100%;
+        height: 2rem;
+        border: 0.1rem solid #cecece00;
+        border-radius: 0.25rem;
+        transition: 0.2s linear;
+        margin-top: 0.5rem;
+      }
+
+      button {
+        border: none;
+        background-color: #0000;
+      }
+
+      .btn {
+        height: 2.5rem;
+        width: 5rem;
+        border: none;
+        border-radius: 0.4rem;
+        margin: 1rem;
+        background-color: #e89700;
+        color: white;
+        transition: 0.2s linear;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0.5rem #754c00;
+        font-weight: 700;
+      }
+
+      /* Footer */
+      #footer {
+        padding: 4rem 3rem;
+        background-color: #363636;
+        color: white;
+      }
+
+      #about-company {
+        margin-bottom: 2rem;
+      }
+
+      .title {
+        font-family: "Source Serif 4", serif;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+
+      #about {
+        font: 1.3rem;
+        text-align: justify;
+      }
+
+      .title-2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .title-3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 2rem 0 1rem 0;
+      }
+
+      #offices {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+
+      .office {
+        width: 45%;
+        min-width: 26rem;
+        padding: 1rem 1rem 0;
+      }
+
+      .country {
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      .location {
+        margin-bottom: 1rem;
+      }
+
+      .hr {
+        margin: 3rem 0;
+      }
+
+      .socials {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .icon-box {
+        display: flex;
+        width: 20rem;
+        justify-content: space-between;
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        transition: 0.2s linear;
+      }
+
+      .social:hover {
+        color: #333;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+
+      .social:hover > i {
+        background-color: #ddd;
+        border: 0.4rem solid #ddd;
+      }
+
+      .social i {
+        border-radius: 50%;
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="hero-image">
+        <a href="https://www.altudo.co/">
+          <img
+            src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P4V00000qU1XEUA0"
+            alt=""
+          />
+        </a>
+      </div>
+      <div id="hero-name">Assignment 1</div>
+    </header>
+    <div id="main-content">
+      <div id="container">
+        <div class="form">
+          <div id="heading">
+            <h1>Contact Us</h1>
+            <hr />
+          </div>
+          <form>
+            <div class="row">
+              <div class="input">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" />
+              </div>
+              <div class="input">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input">
+                <label for="email">Business Email</label>
+                <input id="email" type="email" />
+              </div>
+              <div class="input">
+                <label for="mobile">Mobile</label>
+                <input id="mobile" type="number" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input">
+                <label for="type">Select the Department</label>
+                <br />
+                <select name="" id="">
+                  <option disabled selected>
+                    --- Click Here to Select ---
+                  </option>
+                  <option value="">Accounts</option>
+                  <option value="">Finance</option>
+                  <option value="">Operations</option>
+                  <option value="">Marketing</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input">
+                <label for="msg">Message</label>
+                <input type="text" id="msg" />
+              </div>
+            </div>
+            <button class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div id="about-company">
+        <div class="title">About Altudo</div>
+        <div id="about">
+          We are a global digital marketing and technology consulting company,
+          focused on creating 1:1 personalized, seamless experiences across
+          channels and optimizing your customer experience for business impact.
+          We have completed over 2000+ projects for 45+ Fortune 500 companies
+          across CPG, Legal, Manufacturing, Technology, Financial Services, and
+          Insurance.
+        </div>
+      </div>
+      <div id="about-office">
+        <div class="title-2">Headquarter</div>
+        <div class="office">
+          <div class="country">USA</div>
+          <div class="location">
+            222 Broadway, Suite 1862, New York, NY 10038
+          </div>
+        </div>
+        <div class="title-3">Our Offices</div>
+        <div id="offices">
+          <div class="office">
+            <div class="country">India</div>
+            <div class="location">
+              Plot 29, Sector 18, Gurugram, Sarhol, Haryana, India 122015
+            </div>
+          </div>
+          <div class="office">
+            <div class="country">London</div>
+            <div class="location">
+              2nd Floor, College House, 17 King Edwards Rd, Ruislip London HA4
+              7AE, United Kingdom
+            </div>
+          </div>
+          <div class="office">
+            <div class="country">Canada</div>
+            <div class="location">
+              100 University Avenue, Toronto, ON M5J 1V6, Canada
+            </div>
+          </div>
+          <div class="office">
+            <div class="country">Dubai</div>
+            <div class="location">
+              City Tower 1 , 2nd Floor, 211, Sheik Zayed Road, Dubai, United
+              Arab Emirates
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="hr" />
+      <div class="socials">
+        <div class="icon-box">
+          <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
